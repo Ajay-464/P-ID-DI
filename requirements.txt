@@ -1,0 +1,10 @@
+streamlit
+google-cloud-aiplatform
+pandas
+jsonschema
+opencv-python
+Pillow
+pyvis
+networkx
+matplotlib
+

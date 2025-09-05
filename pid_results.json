@@ -1,0 +1,1430 @@
+{
+    "equipment": [
+        {
+            "tag": "T-101",
+            "type": "Distillation Column",
+            "bounding_box": [
+                107,
+                125,
+                220,
+                706
+            ],
+            "category_name": "equipment",
+            "label": "T-101"
+        },
+        {
+            "tag": "E-106",
+            "type": "Shell and Tube Heat Exchanger",
+            "description": "Reboiler",
+            "bounding_box": [
+                403,
+                715,
+                483,
+                907
+            ],
+            "category_name": "equipment",
+            "label": "E-106"
+        },
+        {
+            "tag": "E-104",
+            "type": "Shell and Tube Heat Exchanger",
+            "description": "Condenser",
+            "bounding_box": [
+                545,
+                428,
+                704,
+                502
+            ],
+            "category_name": "equipment",
+            "label": "E-104"
+        },
+        {
+            "tag": "V-102",
+            "type": "Horizontal Vessel",
+            "description": "Reflux Drum",
+            "bounding_box": [
+                467,
+                563,
+                622,
+                638
+            ],
+            "category_name": "equipment",
+            "label": "V-102"
+        },
+        {
+            "tag": "P-102A",
+            "type": "Centrifugal Pump",
+            "bounding_box": [
+                493,
+                762,
+                574,
+                818
+            ],
+            "category_name": "equipment",
+            "label": "P-102A"
+        },
+        {
+            "tag": "P-102b",
+            "type": "Centrifugal Pump",
+            "bounding_box": [
+                599,
+                762,
+                681,
+                818
+            ],
+            "category_name": "equipment",
+            "label": "P-102b"
+        }
+    ],
+    "instrumentation": [
+        {
+            "tag": "FCV",
+            "type": "Control Valve",
+            "bounding_box": [
+                251,
+                223,
+                292,
+                274
+            ],
+            "category_name": "valves",
+            "label": "FCV"
+        },
+        {
+            "tag": "FRC",
+            "type": "Recording Controller",
+            "measured_variable": "Flow",
+            "bounding_box": [
+                334,
+                185,
+                369,
+                220
+            ],
+            "category_name": "instrumentation",
+            "label": "FRC"
+        },
+        {
+            "tag": "FY",
+            "type": "Signal Converter",
+            "bounding_box": [
+                273,
+                187,
+                308,
+                222
+            ],
+            "category_name": "instrumentation",
+            "label": "FY"
+        },
+        {
+            "tag": "FT",
+            "type": "Transmitter",
+            "measured_variable": "Flow",
+            "bounding_box": [
+                383,
+                149,
+                418,
+                184
+            ],
+            "category_name": "instrumentation",
+            "label": "FT"
+        },
+        {
+            "tag": "FAL/FAH",
+            "type": "Alarm",
+            "measured_variable": "Flow",
+            "bounding_box": [
+                329,
+                116,
+                384,
+                151
+            ],
+            "category_name": "instrumentation",
+            "label": "FAL/FAH"
+        },
+        {
+            "tag": "FE",
+            "type": "Flow Element",
+            "bounding_box": [
+                382,
+                225,
+                419,
+                260
+            ],
+            "category_name": "instrumentation",
+            "label": "FE"
+        },
+        {
+            "tag": "TI",
+            "type": "Indicator",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                238,
+                281,
+                273,
+                316
+            ],
+            "category_name": "instrumentation",
+            "label": "TI"
+        },
+        {
+            "tag": "TI",
+            "type": "Indicator",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                319,
+                396,
+                354,
+                431
+            ],
+            "category_name": "instrumentation",
+            "label": "TI"
+        },
+        {
+            "tag": "TE",
+            "type": "Sensing Element",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                293,
+                565,
+                328,
+                600
+            ],
+            "category_name": "instrumentation",
+            "label": "TE"
+        },
+        {
+            "tag": "TT",
+            "type": "Transmitter",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                328,
+                565,
+                363,
+                600
+            ],
+            "category_name": "instrumentation",
+            "label": "TT"
+        },
+        {
+            "tag": "TAH/TAL",
+            "type": "Alarm",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                320,
+                329,
+                375,
+                364
+            ],
+            "category_name": "instrumentation",
+            "label": "TAH/TAL"
+        },
+        {
+            "tag": "TRC",
+            "type": "Recording Controller",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                392,
+                362,
+                427,
+                397
+            ],
+            "category_name": "instrumentation",
+            "label": "TRC"
+        },
+        {
+            "tag": "TY",
+            "type": "Signal Converter",
+            "bounding_box": [
+                469,
+                508,
+                504,
+                543
+            ],
+            "category_name": "instrumentation",
+            "label": "TY"
+        },
+        {
+            "tag": "TCV",
+            "type": "Control Valve",
+            "bounding_box": [
+                503,
+                532,
+                544,
+                583
+            ],
+            "category_name": "valves",
+            "label": "TCV"
+        },
+        {
+            "tag": "TI",
+            "type": "Indicator",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                384,
+                604,
+                419,
+                639
+            ],
+            "category_name": "instrumentation",
+            "label": "TI"
+        },
+        {
+            "tag": "PI",
+            "type": "Indicator",
+            "measured_variable": "Pressure",
+            "bounding_box": [
+                420,
+                604,
+                455,
+                639
+            ],
+            "category_name": "instrumentation",
+            "label": "PI"
+        },
+        {
+            "tag": "FI",
+            "type": "Indicator",
+            "measured_variable": "Flow",
+            "bounding_box": [
+                456,
+                604,
+                491,
+                639
+            ],
+            "category_name": "instrumentation",
+            "label": "FI"
+        },
+        {
+            "tag": "PI",
+            "type": "Indicator",
+            "measured_variable": "Pressure",
+            "bounding_box": [
+                236,
+                565,
+                271,
+                600
+            ],
+            "category_name": "instrumentation",
+            "label": "PI"
+        },
+        {
+            "tag": "TI",
+            "type": "Indicator",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                238,
+                649,
+                273,
+                684
+            ],
+            "category_name": "instrumentation",
+            "label": "TI"
+        },
+        {
+            "tag": "LE",
+            "type": "Sensing Element",
+            "measured_variable": "Level",
+            "bounding_box": [
+                96,
+                650,
+                131,
+                685
+            ],
+            "category_name": "instrumentation",
+            "label": "LE"
+        },
+        {
+            "tag": "LT",
+            "type": "Transmitter",
+            "measured_variable": "Level",
+            "bounding_box": [
+                143,
+                718,
+                178,
+                753
+            ],
+            "category_name": "instrumentation",
+            "label": "LT"
+        },
+        {
+            "tag": "LAH/LAL",
+            "type": "Alarm",
+            "measured_variable": "Level",
+            "bounding_box": [
+                198,
+                778,
+                252,
+                813
+            ],
+            "category_name": "instrumentation",
+            "label": "LAH/LAL"
+        },
+        {
+            "tag": "LIC",
+            "type": "Indicating Controller",
+            "measured_variable": "Level",
+            "bounding_box": [
+                198,
+                814,
+                233,
+                849
+            ],
+            "category_name": "instrumentation",
+            "label": "LIC"
+        },
+        {
+            "tag": "PE",
+            "type": "Sensing Element",
+            "measured_variable": "Pressure",
+            "bounding_box": [
+                435,
+                96,
+                470,
+                131
+            ],
+            "category_name": "instrumentation",
+            "label": "PE"
+        },
+        {
+            "tag": "PT",
+            "type": "Transmitter",
+            "measured_variable": "Pressure",
+            "bounding_box": [
+                399,
+                107,
+                434,
+                142
+            ],
+            "category_name": "instrumentation",
+            "label": "PT"
+        },
+        {
+            "tag": "PAL/PAH",
+            "type": "Alarm",
+            "measured_variable": "Pressure",
+            "bounding_box": [
+                431,
+                142,
+                485,
+                177
+            ],
+            "category_name": "instrumentation",
+            "label": "PAL/PAH"
+        },
+        {
+            "tag": "PRC",
+            "type": "Recording Controller",
+            "measured_variable": "Pressure",
+            "bounding_box": [
+                475,
+                186,
+                510,
+                221
+            ],
+            "category_name": "instrumentation",
+            "label": "PRC"
+        },
+        {
+            "tag": "PY",
+            "type": "Signal Converter",
+            "bounding_box": [
+                488,
+                236,
+                523,
+                271
+            ],
+            "category_name": "instrumentation",
+            "label": "PY"
+        },
+        {
+            "tag": "PCV",
+            "type": "Control Valve",
+            "bounding_box": [
+                520,
+                245,
+                560,
+                296
+            ],
+            "category_name": "valves",
+            "label": "PCV"
+        },
+        {
+            "tag": "TI",
+            "type": "Indicator",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                577,
+                351,
+                612,
+                386
+            ],
+            "category_name": "instrumentation",
+            "label": "TI"
+        },
+        {
+            "tag": "TI",
+            "type": "Indicator",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                615,
+                387,
+                650,
+                422
+            ],
+            "category_name": "instrumentation",
+            "label": "TI"
+        },
+        {
+            "tag": "FI",
+            "type": "Indicator",
+            "measured_variable": "Flow",
+            "bounding_box": [
+                726,
+                410,
+                761,
+                445
+            ],
+            "category_name": "instrumentation",
+            "label": "FI"
+        },
+        {
+            "tag": "TI",
+            "type": "Indicator",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                760,
+                483,
+                795,
+                518
+            ],
+            "category_name": "instrumentation",
+            "label": "TI"
+        },
+        {
+            "tag": "TI",
+            "type": "Indicator",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                434,
+                551,
+                469,
+                586
+            ],
+            "category_name": "instrumentation",
+            "label": "TI"
+        },
+        {
+            "tag": "PI",
+            "type": "Indicator",
+            "measured_variable": "Pressure",
+            "bounding_box": [
+                469,
+                519,
+                504,
+                554
+            ],
+            "category_name": "instrumentation",
+            "label": "PI"
+        },
+        {
+            "tag": "LE",
+            "type": "Sensing Element",
+            "measured_variable": "Level",
+            "bounding_box": [
+                552,
+                650,
+                587,
+                685
+            ],
+            "category_name": "instrumentation",
+            "label": "LE"
+        },
+        {
+            "tag": "LT",
+            "type": "Transmitter",
+            "measured_variable": "Level",
+            "bounding_box": [
+                587,
+                683,
+                622,
+                718
+            ],
+            "category_name": "instrumentation",
+            "label": "LT"
+        },
+        {
+            "tag": "LAH/LAL",
+            "type": "Alarm",
+            "measured_variable": "Level",
+            "bounding_box": [
+                601,
+                629,
+                656,
+                664
+            ],
+            "category_name": "instrumentation",
+            "label": "LAH/LAL"
+        },
+        {
+            "tag": "LIC",
+            "type": "Indicating Controller",
+            "measured_variable": "Level",
+            "bounding_box": [
+                647,
+                683,
+                682,
+                718
+            ],
+            "category_name": "instrumentation",
+            "label": "LIC"
+        },
+        {
+            "tag": "LY",
+            "type": "Signal Converter",
+            "bounding_box": [
+                685,
+                698,
+                720,
+                733
+            ],
+            "category_name": "instrumentation",
+            "label": "LY"
+        },
+        {
+            "tag": "LCV",
+            "type": "Control Valve",
+            "bounding_box": [
+                755,
+                773,
+                795,
+                824
+            ],
+            "category_name": "valves",
+            "label": "LCV"
+        },
+        {
+            "tag": "FI",
+            "type": "Indicator",
+            "measured_variable": "Flow",
+            "bounding_box": [
+                727,
+                721,
+                762,
+                756
+            ],
+            "category_name": "instrumentation",
+            "label": "FI"
+        },
+        {
+            "tag": "PI",
+            "type": "Indicator",
+            "measured_variable": "Pressure",
+            "bounding_box": [
+                577,
+                785,
+                612,
+                820
+            ],
+            "category_name": "instrumentation",
+            "label": "PI"
+        },
+        {
+            "tag": "PI",
+            "type": "Indicator",
+            "measured_variable": "Pressure",
+            "bounding_box": [
+                682,
+                785,
+                717,
+                820
+            ],
+            "category_name": "instrumentation",
+            "label": "PI"
+        },
+        {
+            "tag": "TI",
+            "type": "Indicator",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                497,
+                882,
+                532,
+                917
+            ],
+            "category_name": "instrumentation",
+            "label": "TI"
+        },
+        {
+            "tag": "LCV",
+            "type": "Control Valve",
+            "bounding_box": [
+                868,
+                900,
+                909,
+                951
+            ],
+            "category_name": "valves",
+            "label": "LCV"
+        },
+        {
+            "tag": "LY",
+            "type": "Signal Converter",
+            "bounding_box": [
+                869,
+                936,
+                904,
+                971
+            ],
+            "category_name": "instrumentation",
+            "label": "LY"
+        },
+        {
+            "tag": "FI",
+            "type": "Indicator",
+            "measured_variable": "Flow",
+            "bounding_box": [
+                868,
+                866,
+                903,
+                901
+            ],
+            "category_name": "instrumentation",
+            "label": "FI"
+        },
+        {
+            "tag": "TI",
+            "type": "Indicator",
+            "measured_variable": "Temperature",
+            "bounding_box": [
+                595,
+                688,
+                630,
+                723
+            ],
+            "category_name": "instrumentation",
+            "label": "TI"
+        }
+    ],
+    "lines": [
+        {
+            "line_number_tag": "L-1",
+            "source_tag": "T-101",
+            "destination_tag": "E-104",
+            "line_type": "Process",
+            "bounding_box": [
+                164,
+                88,
+                456,
+                448
+            ],
+            "category_name": "lines",
+            "label": "12\" Sch 10 CS"
+        },
+        {
+            "line_number_tag": "L-2",
+            "source_tag": "E-104",
+            "destination_tag": "V-102",
+            "line_type": "Process",
+            "bounding_box": [
+                574,
+                500,
+                588,
+                565
+            ],
+            "category_name": "lines",
+            "label": "4\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-3",
+            "source_tag": "V-102",
+            "destination_tag": "P-102A",
+            "line_type": "Process",
+            "bounding_box": [
+                503,
+                637,
+                544,
+                763
+            ],
+            "category_name": "lines",
+            "label": "4\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-4",
+            "source_tag": "V-102",
+            "destination_tag": "P-102b",
+            "line_type": "Process",
+            "bounding_box": [
+                544,
+                637,
+                641,
+                763
+            ],
+            "category_name": "lines",
+            "label": "4\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-5",
+            "source_tag": "P-102A",
+            "destination_tag": "T-101",
+            "line_type": "Process",
+            "bounding_box": [
+                219,
+                240,
+                539,
+                849
+            ],
+            "category_name": "lines",
+            "label": "3\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-6",
+            "source_tag": "P-102b",
+            "destination_tag": "T-101",
+            "line_type": "Process",
+            "bounding_box": [
+                219,
+                240,
+                642,
+                849
+            ],
+            "category_name": "lines",
+            "label": "3\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-7",
+            "source_tag": "P-102A",
+            "destination_tag": "Benzene",
+            "line_type": "Process",
+            "bounding_box": [
+                538,
+                738,
+                963,
+                797
+            ],
+            "category_name": "lines",
+            "label": "2\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-8",
+            "source_tag": "P-102b",
+            "destination_tag": "Benzene",
+            "line_type": "Process",
+            "bounding_box": [
+                641,
+                738,
+                963,
+                797
+            ],
+            "category_name": "lines",
+            "label": "2\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-9",
+            "source_tag": "T-101",
+            "destination_tag": "E-106",
+            "line_type": "Process",
+            "bounding_box": [
+                163,
+                705,
+                426,
+                735
+            ],
+            "category_name": "lines",
+            "label": "6\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-10",
+            "source_tag": "E-106",
+            "destination_tag": "T-101",
+            "line_type": "Process",
+            "bounding_box": [
+                219,
+                581,
+                418,
+                717
+            ],
+            "category_name": "lines",
+            "label": "4\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-11",
+            "source_tag": "T-101",
+            "destination_tag": "Toluene",
+            "line_type": "Process",
+            "bounding_box": [
+                164,
+                920,
+                964,
+                939
+            ],
+            "category_name": "lines",
+            "label": "2\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-12",
+            "source_tag": "L-1",
+            "destination_tag": "Fuel Gas",
+            "line_type": "Process",
+            "bounding_box": [
+                456,
+                108,
+                867,
+                273
+            ],
+            "category_name": "lines",
+            "label": "4\" Sch 40 CS"
+        },
+        {
+            "line_number_tag": "L-13",
+            "destination_tag": "T-101",
+            "line_type": "Process",
+            "bounding_box": [
+                218,
+                342,
+                316,
+                360
+            ],
+            "category_name": "lines",
+            "label": "3\" Sch 40 CS"
+        },
+        {
+            "line_type": "Electrical Signal",
+            "source_tag": "FT",
+            "destination_tag": "FRC",
+            "category_name": "lines",
+            "label": "FT to FRC"
+        },
+        {
+            "line_type": "Electrical Signal",
+            "source_tag": "FRC",
+            "destination_tag": "FY",
+            "category_name": "lines",
+            "label": "FRC to FY"
+        },
+        {
+            "line_type": "Pneumatic Signal",
+            "source_tag": "FY",
+            "destination_tag": "FCV",
+            "category_name": "lines",
+            "label": "FY to FCV"
+        },
+        {
+            "line_type": "Electrical Signal",
+            "source_tag": "PT",
+            "destination_tag": "PRC",
+            "category_name": "lines",
+            "label": "PT to PRC"
+        },
+        {
+            "line_type": "Electrical Signal",
+            "source_tag": "PRC",
+            "destination_tag": "PY",
+            "category_name": "lines",
+            "label": "PRC to PY"
+        },
+        {
+            "line_type": "Pneumatic Signal",
+            "source_tag": "PY",
+            "destination_tag": "PCV",
+            "category_name": "lines",
+            "label": "PY to PCV"
+        },
+        {
+            "line_type": "Electrical Signal",
+            "source_tag": "TT",
+            "destination_tag": "TRC",
+            "bounding_box": [
+                363,
+                380,
+                393,
+                581
+            ],
+            "category_name": "lines",
+            "label": "TT to TRC"
+        },
+        {
+            "line_type": "Electrical Signal",
+            "source_tag": "TRC",
+            "destination_tag": "TY",
+            "bounding_box": [
+                426,
+                380,
+                485,
+                510
+            ],
+            "category_name": "lines",
+            "label": "TRC to TY"
+        },
+        {
+            "line_type": "Pneumatic Signal",
+            "source_tag": "TY",
+            "destination_tag": "TCV",
+            "category_name": "lines",
+            "label": "TY to TCV"
+        },
+        {
+            "line_type": "Electrical Signal",
+            "source_tag": "LT",
+            "destination_tag": "LIC",
+            "bounding_box": [
+                217,
+                752,
+                221,
+                815
+            ],
+            "category_name": "lines",
+            "label": "LT to LIC"
+        },
+        {
+            "line_type": "Electrical Signal",
+            "source_tag": "LIC",
+            "destination_tag": "LY",
+            "bounding_box": [
+                217,
+                848,
+                887,
+                937
+            ],
+            "category_name": "lines",
+            "label": "LIC to LY"
+        },
+        {
+            "line_type": "Pneumatic Signal",
+            "source_tag": "LY",
+            "destination_tag": "LCV",
+            "category_name": "lines",
+            "label": "LY to LCV"
+        },
+        {
+            "line_type": "Electrical Signal",
+            "source_tag": "LT",
+            "destination_tag": "LIC",
+            "bounding_box": [
+                606,
+                717,
+                663,
+                721
+            ],
+            "category_name": "lines",
+            "label": "LT to LIC"
+        },
+        {
+            "line_type": "Electrical Signal",
+            "source_tag": "LIC",
+            "destination_tag": "LY",
+            "bounding_box": [
+                664,
+                717,
+                686,
+                721
+            ],
+            "category_name": "lines",
+            "label": "LIC to LY"
+        },
+        {
+            "line_type": "Pneumatic Signal",
+            "source_tag": "LY",
+            "destination_tag": "LCV",
+            "category_name": "lines",
+            "label": "LY to LCV"
+        }
+    ],
+    "valves": [
+        {
+            "type": "Gate Valve",
+            "bounding_box": [
+                307,
+                236,
+                335,
+                264
+            ],
+            "category_name": "valves",
+            "label": "Gate Valve"
+        },
+        {
+            "type": "Gate Valve",
+            "bounding_box": [
+                216,
+                236,
+                244,
+                264
+            ],
+            "category_name": "valves",
+            "label": "Gate Valve"
+        },
+        {
+            "type": "Check Valve",
+            "bounding_box": [
+                538,
+                818,
+                569,
+                848
+            ],
+            "category_name": "valves",
+            "label": "Check Valve"
+        },
+        {
+            "type": "Check Valve",
+            "bounding_box": [
+                641,
+                818,
+                672,
+                848
+            ],
+            "category_name": "valves",
+            "label": "Check Valve"
+        }
+    ],
+    "safety_devices": [
+        {
+            "type": "Vent to Flare",
+            "location": "T-101",
+            "bounding_box": [
+                197,
+                88,
+                237,
+                126
+            ],
+            "category_name": "safety_devices",
+            "label": "7"
+        },
+        {
+            "type": "Vent to Flare",
+            "bounding_box": [
+                415,
+                292,
+                455,
+                330
+            ],
+            "category_name": "safety_devices",
+            "label": "7"
+        },
+        {
+            "type": "Vent to Flare",
+            "location": "V-102",
+            "bounding_box": [
+                473,
+                497,
+                513,
+                535
+            ],
+            "category_name": "safety_devices",
+            "label": "7"
+        },
+        {
+            "type": "Vent to Atmosphere",
+            "location": "E-104",
+            "bounding_box": [
+                487,
+                360,
+                527,
+                398
+            ],
+            "category_name": "safety_devices",
+            "label": "9"
+        },
+        {
+            "type": "Vent to Atmosphere",
+            "location": "E-106",
+            "bounding_box": [
+                506,
+                715,
+                546,
+                753
+            ],
+            "category_name": "safety_devices",
+            "label": "9"
+        }
+    ],
+    "annotations": [
+        {
+            "text": "UTILITY CONNECTIONS",
+            "bounding_box": [
+                688,
+                175,
+                936,
+                401
+            ],
+            "category_name": "annotations",
+            "label": "UTILITY CONNECTIONS"
+        },
+        {
+            "text": "Fuel Gas",
+            "bounding_box": [
+                786,
+                75,
+                857,
+                91
+            ],
+            "category_name": "annotations",
+            "label": "Fuel Gas"
+        },
+        {
+            "text": "Benzene",
+            "bounding_box": [
+                806,
+                755,
+                878,
+                771
+            ],
+            "category_name": "annotations",
+            "label": "Benzene"
+        },
+        {
+            "text": "Toluene",
+            "bounding_box": [
+                925,
+                851,
+                988,
+                867
+            ],
+            "category_name": "annotations",
+            "label": "Toluene"
+        },
+        {
+            "text": "12\" Sch 10 CS",
+            "bounding_box": [
+                144,
+                64,
+                268,
+                81
+            ],
+            "category_name": "annotations",
+            "label": "12\" Sch 10 CS"
+        },
+        {
+            "text": "3\" Sch 40 CS",
+            "bounding_box": [
+                286,
+                284,
+                380,
+                300
+            ],
+            "category_name": "annotations",
+            "label": "3\" Sch 40 CS"
+        },
+        {
+            "text": "3\" Sch 40 CS",
+            "bounding_box": [
+                138,
+                345,
+                231,
+                360
+            ],
+            "category_name": "annotations",
+            "label": "3\" Sch 40 CS"
+        },
+        {
+            "text": "6\" Sch 40 CS",
+            "bounding_box": [
+                297,
+                606,
+                391,
+                622
+            ],
+            "category_name": "annotations",
+            "label": "6\" Sch 40 CS"
+        },
+        {
+            "text": "4\" Sch 40 CS",
+            "bounding_box": [
+                539,
+                688,
+                633,
+                703
+            ],
+            "category_name": "annotations",
+            "label": "4\" Sch 40 CS"
+        },
+        {
+            "text": "4\" Sch 40 CS",
+            "bounding_box": [
+                577,
+                882,
+                671,
+                897
+            ],
+            "category_name": "annotations",
+            "label": "4\" Sch 40 CS"
+        },
+        {
+            "text": "2\" Sch 40 CS",
+            "bounding_box": [
+                918,
+                950,
+                1000,
+                965
+            ],
+            "category_name": "annotations",
+            "label": "2\" Sch 40 CS"
+        },
+        {
+            "text": "4\" Sch 40 CS",
+            "bounding_box": [
+                476,
+                81,
+                570,
+                96
+            ],
+            "category_name": "annotations",
+            "label": "4\" Sch 40 CS"
+        },
+        {
+            "text": "4\" Sch 40 CS",
+            "bounding_box": [
+                632,
+                503,
+                726,
+                518
+            ],
+            "category_name": "annotations",
+            "label": "4\" Sch 40 CS"
+        },
+        {
+            "text": "4\" Sch 40 CS",
+            "bounding_box": [
+                508,
+                641,
+                602,
+                656
+            ],
+            "category_name": "annotations",
+            "label": "4\" Sch 40 CS"
+        },
+        {
+            "text": "2\" Sch 40 CS",
+            "bounding_box": [
+                899,
+                786,
+                993,
+                801
+            ],
+            "category_name": "annotations",
+            "label": "2\" Sch 40 CS"
+        },
+        {
+            "text": "Insulated Pipe",
+            "bounding_box": [
+                807,
+                521,
+                930,
+                540
+            ],
+            "category_name": "annotations",
+            "label": "Insulated Pipe"
+        }
+    ],
+    "control_relationships": [
+        {
+            "source_tag": "FE",
+            "destination_tag": "FT",
+            "relationship_type": "measures",
+            "category_name": "control_relationships",
+            "label": "FE measures for FT"
+        },
+        {
+            "source_tag": "FT",
+            "destination_tag": "FRC",
+            "relationship_type": "signals",
+            "category_name": "control_relationships",
+            "label": "FT -> FRC"
+        },
+        {
+            "source_tag": "FRC",
+            "destination_tag": "FCV",
+            "relationship_type": "controls",
+            "category_name": "control_relationships",
+            "label": "FRC -> FCV"
+        },
+        {
+            "source_tag": "PE",
+            "destination_tag": "PT",
+            "relationship_type": "measures",
+            "category_name": "control_relationships",
+            "label": "PE measures for PT"
+        },
+        {
+            "source_tag": "PT",
+            "destination_tag": "PRC",
+            "relationship_type": "signals",
+            "category_name": "control_relationships",
+            "label": "PT -> PRC"
+        },
+        {
+            "source_tag": "PRC",
+            "destination_tag": "PCV",
+            "relationship_type": "controls",
+            "category_name": "control_relationships",
+            "label": "PRC -> PCV"
+        },
+        {
+            "source_tag": "TE",
+            "destination_tag": "TT",
+            "relationship_type": "measures",
+            "category_name": "control_relationships",
+            "label": "TE measures for TT"
+        },
+        {
+            "source_tag": "TT",
+            "destination_tag": "TRC",
+            "relationship_type": "signals",
+            "category_name": "control_relationships",
+            "label": "TT -> TRC"
+        },
+        {
+            "source_tag": "TRC",
+            "destination_tag": "TCV",
+            "relationship_type": "controls",
+            "category_name": "control_relationships",
+            "label": "TRC -> TCV"
+        },
+        {
+            "source_tag": "LE",
+            "destination_tag": "LT",
+            "relationship_type": "measures",
+            "category_name": "control_relationships",
+            "label": "LE measures for LT"
+        },
+        {
+            "source_tag": "LT",
+            "destination_tag": "LIC",
+            "relationship_type": "signals",
+            "category_name": "control_relationships",
+            "label": "LT -> LIC"
+        },
+        {
+            "source_tag": "LIC",
+            "destination_tag": "LCV",
+            "relationship_type": "controls",
+            "category_name": "control_relationships",
+            "label": "LIC -> LCV"
+        },
+        {
+            "source_tag": "LT",
+            "destination_tag": "LIC",
+            "relationship_type": "signals",
+            "category_name": "control_relationships",
+            "label": "LT -> LIC"
+        },
+        {
+            "source_tag": "LIC",
+            "destination_tag": "LCV",
+            "relationship_type": "controls",
+            "category_name": "control_relationships",
+            "label": "LIC -> LCV"
+        }
+    ],
+    "junctions": [
+        {
+            "junction_id": "J-1",
+            "type": "Off-Page Connector",
+            "bounding_box": [
+                138,
+                300,
+                179,
+                342
+            ],
+            "category_name": "junctions",
+            "label": "J-1"
+        }
+    ]
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P&ID Digital Intelligence Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .table-container { max-height: 400px; overflow-y: auto; }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-white mb-2">P&ID Digital Intelligence Platform 🚀</h1>
+            <p class="text-gray-400">Upload any P&ID to generate a structured data model.</p>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <div class="bg-gray-800 rounded-lg p-6 shadow-lg mb-8 max-w-3xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-4 text-white">Upload P&ID Image</h2>
+                <div class="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500 transition" id="drop-zone">
+                    <input type="file" id="file-input" class="hidden" accept="image/png, image/jpeg">
+                    <p id="drop-zone-text">Drag & drop your P&ID file here, or click to select a file.</p>
+                    <img id="image-preview" class="hidden mx-auto mt-4 max-h-64 rounded-lg" />
+                </div>
+                <div class="mt-6 flex justify-center">
+                    <button id="analyze-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        Analyze P&ID
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="hidden">
+                <!-- Visual Detections -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-semibold mb-4 text-white">Visual AI Detections</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-800 rounded-lg p-4 shadow-lg">
+                            <h3 class="text-xl font-medium mb-2 text-center text-gray-300">Original Image</h3>
+                            <img id="original-image-display" class="rounded-lg w-full" alt="Original P&ID">
+                        </div>
+                        <div class="bg-gray-800 rounded-lg p-4 shadow-lg">
+                            <h3 class="text-xl font-medium mb-2 text-center text-gray-300">AI Detections</h3>
+                            <div id="annotated-image-container" class="flex items-center justify-center min-h-[200px]">
+                                <!-- Annotated image will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Tables Section -->
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4 text-white">Extracted Data Tables</h2>
+                    <div id="tables-container" class="space-y-6">
+                        <!-- Tables will be dynamically generated here -->
+                    </div>
+                </div>
+            </div>
+             <!-- Loading Spinner -->
+            <div id="loading-spinner" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50">
+                <div class="flex flex-col items-center">
+                    <div class="spinner"></div>
+                    <p class="mt-4 text-lg text-white">AI is performing detailed analysis, please wait...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const dropZoneText = document.getElementById('drop-zone-text');
+        const imagePreview = document.getElementById('image-preview');
+        const analyzeBtn = document.getElementById('analyze-btn');
+        const resultsSection = document.getElementById('results-section');
+        const originalImageDisplay = document.getElementById('original-image-display');
+        const annotatedImageContainer = document.getElementById('annotated-image-container');
+        const tablesContainer = document.getElementById('tables-container');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        
+        // This is the address of your Python backend API server
+        const API_ENDPOINT = 'http://127.0.0.1:5000/analyze'; 
+        let uploadedFile = null;
+
+        // --- File Upload Logic ---
+        dropZone.addEventListener('click', () => fileInput.click());
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('border-blue-500', 'bg-gray-700');
+        });
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('border-blue-500', 'bg-gray-700');
+        });
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('border-blue-500', 'bg-gray-700');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) handleFile(files[0]);
+        });
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) handleFile(fileInput.files[0]);
+        });
+
+        function handleFile(file) {
+            uploadedFile = file;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                imagePreview.src = e.target.result;
+                originalImageDisplay.src = e.target.result;
+                imagePreview.classList.remove('hidden');
+                dropZoneText.classList.add('hidden');
+                analyzeBtn.disabled = false;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // --- Analysis Logic ---
+        analyzeBtn.addEventListener('click', async () => {
+            if (!uploadedFile) return;
+
+            loadingSpinner.classList.remove('hidden');
+            resultsSection.classList.add('hidden');
+            
+            const formData = new FormData();
+            formData.append('image', uploadedFile);
+
+            try {
+                // Make the API call to the Flask backend
+                const response = await fetch(API_ENDPOINT, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                displayResults(result);
+
+            } catch (error) {
+                console.error("Analysis failed:", error);
+                alert(`An error occurred during analysis: ${error.message}`);
+            } finally {
+                loadingSpinner.classList.add('hidden');
+                resultsSection.classList.remove('hidden');
+            }
+        });
+
+        function displayResults(result) {
+            // Display the annotated image returned from the API
+            if (result.annotated_image) {
+                // The backend sends a base64 string, which we display directly in the image src
+                annotatedImageContainer.innerHTML = `<img src="data:image/png;base64,${result.annotated_image}" class="rounded-lg w-full" alt="Annotated P&ID">`;
+            } else {
+                 annotatedImageContainer.innerHTML = `<p class="text-gray-400">No annotated image was returned.</p>`;
+            }
+            
+            tablesContainer.innerHTML = '';
+            const data = result.analysis_data;
+            const categoryMapping = {
+                metadata: "Metadata",
+                equipment: "Equipment",
+                instrumentation: "Instrumentation",
+                lines: "Piping Lines",
+                valves: "Valves",
+            };
+
+            for (const key in categoryMapping) {
+                if (data[key] && ((Array.isArray(data[key]) && data[key].length > 0) || (typeof data[key] === 'object' && Object.keys(data[key]).length > 0))) {
+                    const tableHtml = createTable(data[key], categoryMapping[key]);
+                    tablesContainer.innerHTML += tableHtml;
+                }
+            }
+        }
+        
+        function createTable(data, title) {
+            const dataAsArray = Array.isArray(data) ? data : [data];
+            if (dataAsArray.length === 0) return '';
+            
+            const headers = Object.keys(dataAsArray[0]);
+            let table = `<div class="bg-gray-800 rounded-lg p-4 shadow-lg mb-6">
+                            <h3 class="text-xl font-medium mb-4 text-white">${title}</h3>
+                            <div class="table-container">
+                            <table class="min-w-full divide-y divide-gray-700">
+                                <thead class="bg-gray-700"><tr>`;
+            headers.forEach(header => {
+                table += `<th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">${header.replace(/_/g, ' ')}</th>`;
+            });
+            table += `</tr></thead><tbody class="bg-gray-800 divide-y divide-gray-700">`;
+
+            dataAsArray.forEach(row => {
+                table += `<tr>`;
+                headers.forEach(header => {
+                    let cellData = row[header];
+                    if (typeof cellData === 'object' && cellData !== null) {
+                        cellData = `<pre class="text-xs">${JSON.stringify(cellData, null, 2)}</pre>`;
+                    }
+                    table += `<td class="px-6 py-4 whitespace-pre-wrap text-sm text-gray-200">${cellData}</td>`;
+                });
+                table += `</tr>`;
+            });
+
+            table += `</tbody></table></div></div>`;
+            return table;
+        }
+    </script>
+</body>
+</html>
+
